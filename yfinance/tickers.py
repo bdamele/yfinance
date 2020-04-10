@@ -82,7 +82,7 @@ class Tickers():
                               interval=interval,
                               prepost=prepost,
                               proxy=proxy,
-                              group_by='ticker',
+                              group_by=group_by,
                               threads=threads,
                               progress=progress,
                               **kwargs)
