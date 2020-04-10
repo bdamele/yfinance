@@ -186,7 +186,7 @@ class TickerBase():
                 print('- %s: %s' % (self.ticker, err_msg))
             return shared._DFS[self.ticker]
 
-        # 2) fix weired bug with Yahoo! - returning 60m for 30m bars
+        # 2) fix weird bug with Yahoo! - returning 60m for 30m bars
         if interval.lower() == "30m":
             quotes2 = quotes.resample('30T')
             quotes = _pd.DataFrame(index=quotes2.last().index, data={
